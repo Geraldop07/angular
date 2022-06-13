@@ -1,0 +1,14 @@
+<div class="bg-white rounded-lg shadow-lg text-center relative" style="background: url(https://picsum.photos/200/200?random={{id}}) no-repeat; background-size: cover;">
+  <div class="bg-white rounded-lg bg-opacity-90 absolute top-0 left-0 w-full h-full hover:bg-opacity-10"></div>
+  <div class="z-10 relative px-6 py-8">
+    <div class="mb-3">
+      <img class="w-auto mx-auto rounded-full h-16 w-16 border-4" [ngClass]="genero == 'Male' ? 'border-blue-500' : 'border-pink-500'"  src="https://picsum.photos/200/200?random={{id}}" alt="" />
+    </div>
+    <span class="text-md font-light text-gray-400 absolute left-0 top-0 rounded-lgh-6 w-6">{{id}}</span>
+    <h2 class="text-xl font-medium text-gray-700">{{nombre}}</h2>
+    <span class="text-gray-700 block mb-5 text-sm h-14">{{ocupacion}}</span>
+    <span class="text-gray-700 block mb-5 text-sm truncate ">{{bio}}</span>
+  
+    <button class="px-2 py-1 bg-red-500 text-white rounded-full text-xs hover:bg-red-700" (click)="delete()">Rechazar</button>
+  </div>
+</div>
